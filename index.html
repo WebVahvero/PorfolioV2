@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Developer Portfolio">
+    <meta name="keywords" content="Developer, Portfolio">
+    <meta name="author" content="Valtteri Kurunsaari">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <script src="scripts/sidenav.js" defer></script>
+    <script src="scripts/toggle.js" defer></script>
+    <script src="scripts/intersectionObserver.js" defer></script>
+    <script src="scripts/projects.js" defer></script>
+</head>
+<body>
+    <nav id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <ul class="navlinks">
+            <li><a href="#about">Minusta</a></li>
+            <li><a href="#skills">Taidot</a></li>
+            <li><a href="#projects">Projektit</a></li>
+        </ul>
+    </nav>
+    <div id="content">
+        <header>
+            <div class="header-inner">
+                <a href="#" class="logoLink">
+                    <div class="logo">
+                        <h2>Portfolio<br><span class="logo-name">Valtteri Kurunsaari</span></h2>
+                    </div>
+                </a>
+                <div class="menu">
+                    <button id="openNavButton" onclick="openNav()">Menu</button>
+                </div>
+            </div>
+        </header>
+        <main onclick="closeNav()">
+            <section class="hero">
+                <aside>
+                    <h1 class="top">Tervetuloa</h1>
+                    <h1 class="bottom">ja kiitos, että pääsit käymään portfoliosivustollani!</h1>
+                    <div class="hero-btn">
+                        <a href="#about"><button>Tutustu</button></a>
+                        <a href="#projects"><button>Projektini</button></a>
+                    </div>
+                </aside>
+                <figure>
+                    <img src="img/valtteri.jpg" alt="Valtteri Kurunsaari">
+                    <figcaption>Valtteri Kurunsaari</figcaption>
+                </figure>
+            </section>
+            <section id="about" class="about">
+                <article class="aboutme">
+                    <h4>Minusta</h4>
+                    <p>Olen 24-vuotias ja opiskelen tällä hetkellä Tietojenkäsittelyä Vaasan Ammattikorkeakoulussa.</p>
+                    <p>Kiinnostukseni kohteisiin kuuluu erityisesti verkkosivustojen ja -ohjelmistojen kehitys, sekä niiden suunnittelu.</p>
+                    <p>Työkokemusta minulta löytyy muutama vuosi ravintola-alalta, mutta kokemusta IT-alalla työskentelystä minulla on vain työharjoittelusta Webaulalla.</p>
+                    <p>Vapaa-aikaani vietän mielelläni omien koodaus/ohjelmointi projektien sekä liikunnan parissa. Pidän myös paljon erilaisten ruokien ja leivonnaisten valmistamisesta.</p>
+                </article>
+                <article class="aboutschool">
+                    <h4>Koulutus</h4>
+                    <p>Vaasan ammattikorkeakoulu,<br>Tietojenkäsittelyn tradenomi,AMK<br>(03.09.2019 - jatkuu)</p>
+                    <p>Koulutuskeskus Sedu Lapua,Hotelli-,<br>Ravintola- ja Catering -alan perustutkinto<br>(12.08.2013 - 18.12.2015)</p>
+                    <a href="https://opintopolku.fi/koski/opinnot/dd058a619f274939baa11d23221cd095"><button>Opintorekisteri</button></a>
+                </article>
+                <article class="aboutwork">
+                    <h4>Työkokemus</h4>
+                    <h5 class="accordion">Powerpark 2014 - 2016 & 2020</h5>
+                    <div id="workinfo">
+                        <p>Työskentelin ravintolakokkina huvipuisto Powerparkin ravintoloissa vuosien 2014–2016 ja 2020 kesinä.</p>
+                        <p>Työtehtäviini kuului tavanomaiset keittiön tehtävät kuten keittiönkunnossapito, kuormanpurkaminen ja esivalmisteiden valmistaminen. Valmistin a la carte annoksia, hampurilaisia, pizzoja ja lounas ruokia.</p>
+                    </div>
+                    <hr>
+                    <h5 class="accordion">OperaGrill 2017 & 2018</h5>
+                    <div id="workinfo">
+                        <p>Työskentelin Savonlinnan OperaGrillissä ravintolakokkina kahtena kesänä vuosina 2017 ja 2018.</p>
+                        <p>Työtehtäviini kuului tavanomaiset keittiön tehtävät kuten keittiönkunnossapito, kuormanpurkaminen ja esivalmisteiden valmistaminen. Valmistin a la carte annoksia ja hampurilaisia käyttäen hiiligriiliä.</p>
+                    </div>
+                    <hr>
+                    <h5 class="accordion">Rosso 2017, 2018 & 2019</h5>
+                    <div id="workinfo">
+                        <p>Työskentelin yrityksessä määräaikaisena työntekijänä vuosina 2017, 2018 ja 2019.</p>
+                        <p>Tehtävänä yrityksessä oli a la carte annosten, pizzojen ja lounasruokien valmistaminen sekä tavanomaiset keittiön tehtävät kuten keittiönkunnossapito, kuormanpurkaminen ja esivalmisteiden valmistaminen.</p>
+                    </div>
+                    <hr>
+                    <h5 class="accordion">Pancho Villa 2021</h5>
+                    <div id="workinfo">
+                        <p>Olin töissä Pancho Villassa alkuvuoden ja kesän 2021.</p>
+                        <p>Tehtävänä yrityksessä oli annosten kuten hampurilaisten ja meksikolaistyylisten annosten valmistaminen ja keittiön tavanomaiset kuten keittiönkunnossapito, kuormanpurkaminen ja esivalmisteiden valmistaminen.</p>
+                    </div>
+                    <hr>
+                    <h5 class="accordion">WebAula  13.9.2021 - 18.2.2022</h5>
+                    <div id="workinfo">
+                        <p>Työharjoittelijana WebAulalla 13.9.2021 - 18.2.2022.</p>
+                        <p>Ensimmäinen IT-alan työ. Tehtävänä yrityksessä Wordpress sivustojen rakentaminen, testaaminen ja sisällönpäivitys asiakas yrityksille.</p>
+                    </div>
+                    <hr>
+                </article>
+            </section>
+            <section id="skills" class="skills">
+                <div class="content">
+                    <div class="left">
+                        <img title="Figma" src="icons/figma.svg" alt="Figma" class="logo anim" data-delay=".2s">
+                    </div>
+                    <div class="right">
+                        <div class="anim" data-delay=".2s">
+                            <h2>Suunnittelu</h2>
+                            <p>Aloitan usein verkkosivujen tekemisen suunnittelemalla niiden ulkoasun. Ulkoasun suunnitteluun käytän Figmaa, jonka olen havainnut olevan itselleni mieluisin. Myös Adobe XD on tuttu, mutta sen käyttö on jäänyt vähemmälle.</p>
+                            <p>Kuvia tai logoja muokkaan Photoshopilla, gimpillä tai inkscapella.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="left">
+                        <img title="HTML5" src="icons/html.svg" alt="HTML5" class="logo anim" data-delay=".2s">
+                        <img title="CSS3" src="icons/css.svg" alt="CSS3" class="logo anim" data-delay=".3s">
+                        <img title="JavaScript" src="icons/javascript.svg" alt="JavaScript" class="logo anim" data-delay=".4s">
+                    </div>
+                    <div class="right">
+                        <div class="anim" data-delay=".2s">
+                            <h2>Frontend</h2>
+                            <p>Verkkosivujen julkisivun rakentaminen luonnistuu minulta luontevasti HTML ja CSS teknologioita käyttäen. Koen että osaan html ja css teknologiat hyvin, sillä saan niillä aikaiseksi kaiken mitä yritän niillä saavuttaa. Olen myös kiinnostunut lisäämään käytettävyyttä ja saatavuutta verkkosivuillani ja olen aina kiinnostunut kehittymään sen saralla.</p>
+                            <p>Javascriptin avulla luon interaktiivisuutta verkkosivuille. Osaan tehdä yleisiä DOM manipulaatioita sen avulla. Pyrin jatkuvasti kehittämään taitojani javascriptin kanssa ja tavoitteenani on tulevaisuudessa opetella jokin frameworkki kuten React tai Vue.js.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="left">
+                        <img title="PHP" src="icons/php.svg" alt="PHP" class="logo anim" data-delay=".2s">
+                        <img title="MySQL" src="icons/mysql.svg" alt="MySQL" class="logo anim" data-delay=".3s">
+                        <img title="Python" src="icons/python.svg" alt="Python" class="logo anim" data-delay=".4s">
+                        <img title="C#" src="icons/cSharp.svg" alt="C#" class="logo anim" data-delay=".5s">
+                    </div>
+                    <div class="right">
+                        <div class="anim" data-delay=".2s">
+                            <h2>Backend</h2>
+                            <p>Dynaamisuuta luon sivustoille käyttäen PHPta, joka on minulle tutuin palvelinpuolen skriptikieli. En ole käyttänyt PHPta koulun ulkopuolella usein, mutta se on tällä hetkellä harjoittelussa.</p>
+                            <p>Osaan SQL kysely kieltä ihan hyvin. Tietokantana minulle tutuimmat ovat MySQL ja MariaDB. Relaatiotietokantojen suunnittelussa koen tarvitsevani vielä harjoitusta, sillä kaikki kokemukseni tulee siitä pelkästään koulusta.</p>
+                            <p>Koulussa käytimme ohjelmoinnin opiskeluun C# kieltä ja olen tehnyt muutamia yksinkertaisia ohjelmia sen avulla koulussa, mutta en ole käyttänyt sitä henkilökohtaisten projektien tekemiseen.</p>
+                            <p>Pythonin opettelin mielenkiinnosta ja olen tehnyt muutamia perusteiden opetteluun soveltuvia ohjelmia sillä.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="left">
+                        <img title="Wordpress" src="icons/wordpress.svg" alt="Wordpress" class="logo anim" data-delay=".2s">
+                        <img title="Elementor" src="icons/elementor.svg" alt="Elementor" class="logo anim" data-delay=".3s">
+                    </div>
+                    <div class="right">
+                        <div class="anim" data-delay=".2s">
+                            <h2>Worpress</h2>
+                            <p>Wordpress sivustojen tekemisestä minulla on aitoa työkokemusta ja koen hallitsevani sen hyvin. Wordpressillä olen tehnyt useita sivustoja yrityksille käyttäen lisäosia kuten Elementor, Woocommerce, Polylang, FacetWP ja Gravityforms.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="left">
+                        <img title="Git" src="icons/git.svg" alt="Git" class="logo anim" data-delay=".2s">
+                        <img title="GitHub" src="icons/github.svg" alt="GitHub" class="logo anim" data-delay=".3s">
+                    </div>
+                    <div class="right">
+                        <div class="anim" data-delay=".2s">
+                            <h2>Versionhallinta</h2>
+                            <p>Versionhallintana minulle tutuin on git ja käytän sitä GitHubin kanssa.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="projects">
+                <h2>My Projects</h2>
+                <button id="reposBtn">Check My Projects</button>
+                <div id="repos"></div>
+            </section>
+        </main>
+        <footer>
+            <div class="social-icons">
+                <a href="https://github.com/WebVahvero"><img src="icons/github.svg" alt="GitHub"></a>
+                <a href="https://www.linkedin.com/in/valtteri-kurunsaari-b40410207/"><img src="icons/linkedin.svg" alt="LinkedIn"></a>
+            </div>
+            <div class="copyright">
+                <h6>&copy; Valtteri Kurunsaari</h6>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
